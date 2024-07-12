@@ -1,5 +1,5 @@
 'use client'
-import { useFormCreateManager } from '@/forms/createManager'
+import { useFormCreateManager } from '@/forms/createManager2'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 
@@ -26,7 +26,7 @@ export const CreateManager = ({ className }: ICreateAdminProps) => {
     if (error) {
       toast({ title: error.message })
     }
-  }, [error])
+  }, [toast ,error])
 
   return (
     <div

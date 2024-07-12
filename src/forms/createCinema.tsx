@@ -1,9 +1,8 @@
-'use client'
 import { ProjectionType, SoundSystemType } from '@prisma/client'
 import { z } from 'zod'
-import { useForm, FormProvider } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod'
 import { ReactNode } from 'react'
+import { useForm, FormProvider } from "react-hook-form"
 
 export const schemaCreateScreen = z.object({
   projectionType: z.nativeEnum(ProjectionType),
@@ -26,8 +25,6 @@ export const schemaCreateCinema = z.object({
   screens: z.array(schemaCreateScreen),
 })
 
-export type FormTypeCreateCinema = z.infer<typeof schemaCreateCinema>
-
 export const useFormCreateCinema = () =>
   useForm<FormTypeCreateCinema>({
     resolver: zodResolver(schemaCreateCinema),
@@ -47,3 +44,7 @@ export const FormProviderCreateCinema = ({
 
   return <FormProvider {...methods}>{children}</FormProvider>
 }
+
+export type FormTypeCreateCinema = z.infer<typeof schemaCreateCinema>
+
+

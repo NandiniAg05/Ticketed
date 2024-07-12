@@ -1,6 +1,6 @@
 'use client'
 
-import { useFormCreateMovie } from '@/forms/createMovie'
+import { useFormCreateMovie } from '@/forms/createMovie2'
 import { Label } from '../ui/label'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'

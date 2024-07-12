@@ -78,7 +78,7 @@ export const AddShows = () => {
       <Label title="Shows">
         <div className="grid grid-cols-3 gap-2">
           {fields.map((item, index) => (
-            <div>
+            <div key={item.id}>
               <Label key={item.id}>
                 <Input
                   {...register(`showtimes.${index}.time`)}

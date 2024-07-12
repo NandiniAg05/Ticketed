@@ -1,7 +1,5 @@
-'use client'
 import { Genre } from '@prisma/client'
 import { z } from 'zod'
-import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 export const schemaCreateMovie = z.object({
@@ -15,5 +13,4 @@ export const schemaCreateMovie = z.object({
 
 export type FormTypeCreateMovie = z.infer<typeof schemaCreateMovie>
 
-export const useFormCreateMovie = () =>
-  useForm<FormTypeCreateMovie>({ resolver: zodResolver(schemaCreateMovie) })
+

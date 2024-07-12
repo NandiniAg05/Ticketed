@@ -1,5 +1,5 @@
 'use client'
-import { useFormCreateManager } from '@/forms/createManager'
+import { useFormCreateAdmin } from '@/forms/createAdmin2'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 
@@ -15,7 +15,7 @@ import { useEffect } from 'react'
 export interface ICreateAdminProps extends BaseComponent {}
 
 export const CreateAdmin = ({ className }: ICreateAdminProps) => {
-  const { register, handleSubmit, reset } = useFormCreateManager()
+  const { register, handleSubmit, reset } = useFormCreateAdmin()
   const { mutateAsync, isLoading, error } =
     trpcClient.admins.create.useMutation()
   const { toast } = useToast()
@@ -24,7 +24,7 @@ export const CreateAdmin = ({ className }: ICreateAdminProps) => {
     if (error) {
       toast({ title: error.message })
     }
-  }, [error])
+  }, [toast,error])
 
   return (
     <div
