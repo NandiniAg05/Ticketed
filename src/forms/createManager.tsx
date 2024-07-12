@@ -1,3 +1,4 @@
+'use client'
 import { FormProvider, useForm } from 'react-hook-form'
 import { ReactNode } from 'react'
 import { z } from 'zod'

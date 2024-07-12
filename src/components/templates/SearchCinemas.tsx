@@ -16,6 +16,7 @@ import { RouterOutputs } from '@/trpc/clients/types'
 import { SelectMovie } from '../organisms/SelectMovie'
 import { SelectShowtimes } from '../organisms/SelectShowtimes'
 import { SelectSeats } from '../organisms/SelectSeats'
+import { useRouter } from 'next/navigation'
 
 export const SearchCinemas = () => {
   return (
@@ -158,9 +159,8 @@ export const MovieDialog = () => {
   const movieId = params.get('movieId')
   const screenId = params.get('screenId')
   const showtimeId = params.get('showtimeId')
-
+  const router = useRouter()
   const [openDialog, setOpenDialog] = useState(Boolean(cinemaId))
-
   const { cinema } = useGetCinema({ cinemaId })
   const { current: map } = useMap()
   useEffect(() => {
@@ -179,15 +179,19 @@ export const MovieDialog = () => {
     return null
   }
 
+  const handleDialogClose: React.Dispatch<React.SetStateAction<boolean>> = (state) => {
+    if (typeof state === 'boolean' && !state) {
+      deleteAll();
+      router.push('/');
+    }
+    setOpenDialog(state);
+  };
+
   return (
     <SimpleDialog
       title={cinema.name}
       open={openDialog}
-      setOpen={(state) => {
-        deleteAll()
-        console.log('Deleting..')
-        setOpenDialog(state)
-      }}
+      setOpen={handleDialogClose}
     >
       <div className="space-y-8">
         <SelectMovie cinemaId={cinema.id} />

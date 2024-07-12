@@ -1,3 +1,4 @@
+'use client'
 import { Genre } from '@prisma/client'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
