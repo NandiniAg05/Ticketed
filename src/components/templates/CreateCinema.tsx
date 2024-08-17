@@ -13,9 +13,8 @@ import { useMap } from 'react-map-gl'
 
 import { HtmlSelect } from '../ui/select'
 
-import {
-  FormTypeCreateCinema, FormProviderCreateCinema
-} from '@/forms/createCinema'
+import {FormProviderCreateCinema} from '@/forms/createCinema2'
+import { FormTypeCreateCinema } from '@/forms/createCinema'
 // import { FormProviderCreateCinema } from '@/forms/createCinema2'
 import { BrandIcon } from '../ui/BrandIcon'
 import { useToast } from '../molecules/toaster/use-toast'

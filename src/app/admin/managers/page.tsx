@@ -1,5 +1,4 @@
 import { CreateManager } from '@/components/templates/CreateManager'
-import { trpcServer } from '@/trpc/clients/server'
 import { ListManagers } from '@/components/templates/ListManagers'
 
 export default async function Page() {
