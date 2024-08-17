@@ -1,6 +1,5 @@
 import { ProjectionType, SoundSystemType } from '@prisma/client'
 import { z } from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
 import { ReactNode } from 'react'
 // import { useForm, FormProvider } from "react-hook-form"
 

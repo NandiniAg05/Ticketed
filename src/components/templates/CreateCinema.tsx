@@ -40,7 +40,7 @@ export const CreateCinemaContent = ({}: ICreateCinemaProps) => {
   const { register, handleSubmit, setValue, reset, control } =
     useFormContext<FormTypeCreateCinema>()
   const {
-    isLoading,
+    // isLoading,
     data,
     error,
     mutateAsync: createCinema,
@@ -90,7 +90,7 @@ export const CreateCinemaContent = ({}: ICreateCinemaProps) => {
         </Label> */}
         <AddScreens />
 
-        <Button type="submit" loading={isLoading}>
+        <Button type="submit">
           Create cinema
         </Button>
       </form>

@@ -2,8 +2,18 @@ import { trpcServer } from '@/trpc/clients/server'
 import { UserCard } from '../organisms/UserCard'
 import { Title2 } from '../ui/typography'
 
+async function getUser() {
+  try {
+        const  data  = await trpcServer.managers.findAll.query()
+
+        return data;
+      }     catch (err) {
+          return;
+      }
+}
+
 export const ListManagers = async () => {
-  const managers = await trpcServer.managers.findAll.query()
+  const managers = await getUser()
   return (
     <div className="mt-6">
       <Title2>Managers</Title2>

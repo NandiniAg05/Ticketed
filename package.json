@@ -15,9 +15,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@clerk/nextjs": "^5.1.6",
+    "@clerk/nextjs": "^5.3.1",
     "@hookform/resolvers": "^3.7.0",
-    "@prisma/client": "^5.16.1",
+    "@prisma/client": "^5.18.0",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-label": "^2.1.0",
@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "@types/bwip-js": "^3.2.3",
+    "@types/next": "^9.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

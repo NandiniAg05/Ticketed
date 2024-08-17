@@ -1,6 +1,5 @@
 import { ReactNode } from 'react'
 import { z } from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
 
 export const schemaCreateAdmin = z.object({
   id: z.string().min(1, { message: 'Admin name is required' }),

@@ -16,7 +16,7 @@ export interface ICreateAdminProps extends BaseComponent {}
 
 export const CreateAdmin = ({ className }: ICreateAdminProps) => {
   const { register, handleSubmit, reset } = useFormCreateAdmin()
-  const { mutateAsync, isLoading, error } =
+  const { mutateAsync, error } =
     trpcClient.admins.create.useMutation()
   const { toast } = useToast()
 
@@ -50,7 +50,7 @@ export const CreateAdmin = ({ className }: ICreateAdminProps) => {
         <Label title="UID">
           <Input placeholder="Enter the uid" {...register('id')} />
         </Label>
-        <Button type="submit" loading={isLoading}>
+        <Button type="submit" >
           Submit
         </Button>
       </form>

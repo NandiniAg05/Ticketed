@@ -1,8 +1,18 @@
 import { trpcServer } from '@/trpc/clients/server'
 import { CinemaInfo } from '@/components/templates/ListCinemas'
 
+async function getUser() {
+  try {
+        const  data  = await trpcServer.cinemas.myCinemas.query()
+
+        return data || [];
+      }     catch (err) {
+          return [];
+      }
+}
+
 export default async function page() {
-  const cinemas = await trpcServer.cinemas.myCinemas.query()
+  const cinemas = await getUser()
   return (
     <main>
       <div>

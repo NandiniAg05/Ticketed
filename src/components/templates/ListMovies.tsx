@@ -7,8 +7,17 @@ import { MovieInfo } from '../organisms/MovieInfo'
 
 export interface IListMoviesProps {}
 
+async function getUser() {
+  try {
+        const data  = await trpcServer.movies.movies.query()
+        return data || [];
+      }     catch (err) {
+          return [];
+      }
+}
+
 export const ListMovies = async ({}: IListMoviesProps) => {
-  const movies = await trpcServer.movies.movies.query()
+  const movies = await getUser()
 
   return (
     <div>
