@@ -9,4 +9,3 @@ export const schemaCreateShowtime = z.object({
 })
 
 export type FormTypeCreateShowtime = z.infer<typeof schemaCreateShowtime>
-

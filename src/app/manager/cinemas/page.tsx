@@ -3,12 +3,12 @@ import { CinemaInfo } from '@/components/templates/ListCinemas'
 
 async function getUser() {
   try {
-        const  data  = await trpcServer.cinemas.myCinemas.query()
+    const data = await trpcServer.cinemas.myCinemas.query()
 
-        return data || [];
-      }     catch (err) {
-          return [];
-      }
+    return data || []
+  } catch (err) {
+    return []
+  }
 }
 
 export default async function page() {

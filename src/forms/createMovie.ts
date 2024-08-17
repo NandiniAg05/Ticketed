@@ -12,5 +12,3 @@ export const schemaCreateMovie = z.object({
 })
 
 export type FormTypeCreateMovie = z.infer<typeof schemaCreateMovie>
-
-

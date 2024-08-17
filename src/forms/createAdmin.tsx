@@ -7,7 +7,6 @@ export const schemaCreateAdmin = z.object({
 
 export type FormTypeCreateAdmin = z.infer<typeof schemaCreateAdmin>
 
-
 // export const useFormCreateAdmin = () =>
 //   useForm<FormTypeCreateAdmin>({
 //     resolver: zodResolver(schemaCreateAdmin),

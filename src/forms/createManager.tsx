@@ -7,5 +7,3 @@ export const schemaCreateManager = z.object({
 })
 
 export type FormTypeCreateManager = z.infer<typeof schemaCreateManager>
-
-

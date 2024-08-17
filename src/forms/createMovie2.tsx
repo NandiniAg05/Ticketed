@@ -5,4 +5,4 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 export const useFormCreateMovie = () =>
-    useForm<FormTypeCreateMovie>({ resolver: zodResolver(schemaCreateMovie) })
+  useForm<FormTypeCreateMovie>({ resolver: zodResolver(schemaCreateMovie) })

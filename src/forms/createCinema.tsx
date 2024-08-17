@@ -45,5 +45,3 @@ export const schemaCreateCinema = z.object({
 // }
 
 export type FormTypeCreateCinema = z.infer<typeof schemaCreateCinema>
-
-

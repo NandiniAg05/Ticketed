@@ -13,7 +13,7 @@ import { useMap } from 'react-map-gl'
 
 import { HtmlSelect } from '../ui/select'
 
-import {FormProviderCreateCinema} from '@/forms/createCinema2'
+import { FormProviderCreateCinema } from '@/forms/createCinema2'
 import { FormTypeCreateCinema } from '@/forms/createCinema'
 // import { FormProviderCreateCinema } from '@/forms/createCinema2'
 import { BrandIcon } from '../ui/BrandIcon'
@@ -90,9 +90,7 @@ export const CreateCinemaContent = ({}: ICreateCinemaProps) => {
         </Label> */}
         <AddScreens />
 
-        <Button type="submit">
-          Create cinema
-        </Button>
+        <Button type="submit">Create cinema</Button>
       </form>
       <Map
         initialViewState={{

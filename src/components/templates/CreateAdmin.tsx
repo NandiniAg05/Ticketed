@@ -16,15 +16,14 @@ export interface ICreateAdminProps extends BaseComponent {}
 
 export const CreateAdmin = ({ className }: ICreateAdminProps) => {
   const { register, handleSubmit, reset } = useFormCreateAdmin()
-  const { mutateAsync, error } =
-    trpcClient.admins.create.useMutation()
+  const { mutateAsync, error } = trpcClient.admins.create.useMutation()
   const { toast } = useToast()
 
   useEffect(() => {
     if (error) {
       toast({ title: error.message })
     }
-  }, [toast,error])
+  }, [toast, error])
 
   return (
     <div
@@ -50,9 +49,7 @@ export const CreateAdmin = ({ className }: ICreateAdminProps) => {
         <Label title="UID">
           <Input placeholder="Enter the uid" {...register('id')} />
         </Label>
-        <Button type="submit" >
-          Submit
-        </Button>
+        <Button type="submit">Submit</Button>
       </form>
     </div>
   )

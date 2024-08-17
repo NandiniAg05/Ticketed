@@ -4,16 +4,16 @@ import { Title2 } from '../ui/typography'
 
 async function getUser() {
   try {
-        const data  = await trpcServer.admins.findAll.query()
+    const data = await trpcServer.admins.findAll.query()
 
-        return data;
-      }     catch (err) {
-          return;
-      }
+    return data
+  } catch (err) {
+    return
+  }
 }
 
 export const ListAdmins = async () => {
-  const admins = await getUser() 
+  const admins = await getUser()
   return (
     <div className="mt-6">
       <Title2>Admins</Title2>

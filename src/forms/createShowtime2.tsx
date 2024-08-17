@@ -7,17 +7,16 @@ import { z } from 'zod'
 import { ReactNode } from 'react'
 
 export const useFormCreateShowtime = () =>
-    useForm<FormTypeCreateShowtime>({
-      resolver: zodResolver(schemaCreateShowtime),
-    })
-  
-  export const FormProviderCreateShowtime = ({
-    children,
-  }: {
-    children: ReactNode
-  }) => {
-    const methods = useFormCreateShowtime()
-  
-    return <FormProvider {...methods}>{children}</FormProvider>
-  }
-  
+  useForm<FormTypeCreateShowtime>({
+    resolver: zodResolver(schemaCreateShowtime),
+  })
+
+export const FormProviderCreateShowtime = ({
+  children,
+}: {
+  children: ReactNode
+}) => {
+  const methods = useFormCreateShowtime()
+
+  return <FormProvider {...methods}>{children}</FormProvider>
+}

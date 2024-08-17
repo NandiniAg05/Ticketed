@@ -179,13 +179,15 @@ export const MovieDialog = () => {
     return null
   }
 
-  const handleDialogClose: React.Dispatch<React.SetStateAction<boolean>> = (state) => {
+  const handleDialogClose: React.Dispatch<React.SetStateAction<boolean>> = (
+    state,
+  ) => {
     if (typeof state === 'boolean' && !state) {
-      deleteAll();
-      router.push('/');
+      deleteAll()
+      router.push('/')
     }
-    setOpenDialog(state);
-  };
+    setOpenDialog(state)
+  }
 
   return (
     <SimpleDialog

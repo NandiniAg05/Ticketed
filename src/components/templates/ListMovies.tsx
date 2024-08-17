@@ -9,11 +9,11 @@ export interface IListMoviesProps {}
 
 async function getUser() {
   try {
-        const data  = await trpcServer.movies.movies.query()
-        return data || [];
-      }     catch (err) {
-          return [];
-      }
+    const data = await trpcServer.movies.movies.query()
+    return data || []
+  } catch (err) {
+    return []
+  }
 }
 
 export const ListMovies = async ({}: IListMoviesProps) => {

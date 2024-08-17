@@ -26,7 +26,7 @@ export const CreateManager = ({ className }: ICreateAdminProps) => {
     if (error) {
       toast({ title: error.message })
     }
-  }, [toast ,error])
+  }, [toast, error])
 
   return (
     <div

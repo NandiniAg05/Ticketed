@@ -4,12 +4,12 @@ import { Title2 } from '../ui/typography'
 
 async function getUser() {
   try {
-        const  data  = await trpcServer.managers.findAll.query()
+    const data = await trpcServer.managers.findAll.query()
 
-        return data;
-      }     catch (err) {
-          return;
-      }
+    return data
+  } catch (err) {
+    return
+  }
 }
 
 export const ListManagers = async () => {

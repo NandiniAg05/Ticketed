@@ -3,12 +3,12 @@ import { trpcServer } from '@/trpc/clients/server'
 
 async function getUser() {
   try {
-        const data  = await trpcServer.cinemas.cinemas.query()
+    const data = await trpcServer.cinemas.cinemas.query()
 
-        return data || [];
-      }     catch (err) {
-          return [];
-      }
+    return data || []
+  } catch (err) {
+    return []
+  }
 }
 
 export default async function page() {
