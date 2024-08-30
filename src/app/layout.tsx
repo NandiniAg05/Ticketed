@@ -2,13 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from '@clerk/nextjs'
+import { ClerkProvider } from '@clerk/nextjs'
 import { TRPCReactProvider } from '@/trpc/clients/client'
 import { Container } from '@/components/ui/container'
 import { Navbar } from '@/components/organisms/Navbar'
